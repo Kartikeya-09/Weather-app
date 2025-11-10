@@ -1,8 +1,26 @@
-# React + Vite
+# Weather Dashboard (React + Node proxy)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple weather dashboard that fetches data from the OpenWeatherMap API. This project includes:
 
-Currently, two official plugins are available:
+- A React frontend (client) that shows current weather + 5-day forecast and supports:
+  - city search
+  - current location (geolocation)
+  - error and loading states
+- A minimal Node/Express proxy (server) to keep your OpenWeatherMap API key out of client bundle
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can run only the client (using your own API key directly) or the client + server proxy (recommended for security).
+
+Quick start (recommended: client + server)
+1. Create an OpenWeatherMap account and get an API key: https://openweathermap.org/api
+2. Start the server:
+   - cd server
+   - create a .env file (see .env.example) with OPENWEATHER_API_KEY
+   - npm install
+   - npm start
+3. Start the client:
+   - cd client
+   - npm install
+   - npm start
+4. Open http://localhost:3000
+
+If you prefer no server, set RE
